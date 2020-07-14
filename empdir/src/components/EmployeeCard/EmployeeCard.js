@@ -3,6 +3,7 @@ import "./style.css";
 
 function EmployeeCard(props) {
   return (
+  <div className="col-4">
     <div className="card">
       <div className="img-container">
         <img alt={props.name} src={props.image} />
@@ -28,6 +29,8 @@ function EmployeeCard(props) {
       </div>
       <span className="remove">𝘅</span>
     </div>
+    </div>
+   
   );
 }
 

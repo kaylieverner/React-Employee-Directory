@@ -16,10 +16,17 @@ class Employee extends React.Component{
     <Wrapper>
     <div>
       <div className="row">
-        <div className="col"><Button></Button></div>
-        <div className="col"><Filter></Filter></div>
+        <div className="col">
+          <Button></Button>
+        </div>
+        <div className="col">
+          <Filter></Filter>
+        </div>
+        <div className="col">
+          <Filter></Filter>
+        </div>
       </div>
-      <div className="row">
+      <div className="row ml-5">
         {this.state.employees.map((employee) => (<EmployeeCard 
         id={employee.index} 
         name={employee.name} 
