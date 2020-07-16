@@ -1,23 +1,17 @@
-import React from "react";
+import React, {Component} from "react";
 import EmployeeCard from "../EmployeeCard/EmployeeCard";
-import Button from "../Button/button";
+// import Button from "../Button/button";
 import Filter from "../Filter/filter";
 import Sort from "../Sort/sort"
 import employees from "../../employees.json";
 import Wrapper from "../Wrapper";
 
-class Employee extends React.Component{
+class Employee extends Component{
 
   state = {
-    employees: employees,
+    employees,
     employeesAsc: []
   };
-
-  // sortAscending = () => {
-  //   this.state.employees.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)); 
-  //   this.setState({ employees })
-  //   console.log("sorted");
-  // }
 
   sortAsc = (a, b) => {
     // Use toUpperCase() to ignore character casing
@@ -37,6 +31,13 @@ class Employee extends React.Component{
     // this.state.employeesAsc = this.state.employees.sort(this.sortAsc);
     this.setState({employees: this.state.employees.sort(this.sortAsc)})
   }
+
+  // removeEmployee = id => {
+  //   const employees = this.state.employees.filter(employee => employee.id !== id);
+  //   this.setState({ employees })
+  //   // console.log(this.state.employees.id);
+  //   // this.setState({ employees: this.state.employees.filter(employee => employee.id !== id) });
+  // };
   
 
   render() {
@@ -45,7 +46,7 @@ class Employee extends React.Component{
     <div>
       <div className="row">
         <div className="col">
-          <Button></Button>
+          {/* <Button></Button> */}
         </div>
         <div className="col">
           <Sort employees={this.state.employees} runSortAsc={this.runSortAsc}></Sort>
@@ -55,8 +56,11 @@ class Employee extends React.Component{
         </div>
       </div>
       <div className="row ml-5">
-        {this.state.employees.map((employee) => (<EmployeeCard 
-        key={employee.index} 
+        {this.state.employees.map(employee => (
+        <EmployeeCard 
+        // removeEmployee={this.removeEmployee}
+        key={employee.id} 
+        id={employee.id}
         name={employee.name} 
         email={employee.email}
         image={employee.image} 
