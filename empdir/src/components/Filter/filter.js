@@ -1,7 +1,10 @@
 import React from "react";
 import "./style.css";
+// import FilterOption from "../FilterOption/filterOption";
 
 function Filter(props) {
+
+  
   return (
 <form>
   <div className="form-group row">
@@ -14,15 +17,13 @@ function Filter(props) {
       </select>
 
       <select className="form-control col" id="filter">
-        <option>Name</option>
-        <option>Office</option>
-        <option>Department</option>
-        <option>Role</option>
+      <option>Name</option>
       </select>
     </div>
 </form>
 
   );
+  
 }
 
 export default Filter;

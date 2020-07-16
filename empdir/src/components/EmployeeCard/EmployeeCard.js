@@ -3,9 +3,9 @@ import "./style.css";
 
 class EmployeeCard extends React.Component {
 
-  removeEmployee = () => {
-    this.props.removeEmployee()
-  }
+  // removeEmployee = () => {
+  //   this.props.removeEmployee()
+  // }
 
   render() {
   return (
