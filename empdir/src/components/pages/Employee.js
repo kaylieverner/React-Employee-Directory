@@ -2,14 +2,22 @@ import React from "react";
 import EmployeeCard from "../EmployeeCard/EmployeeCard";
 import Button from "../Button/button";
 import Filter from "../Filter/filter";
+import Sort from "../Sort/sort"
 import employees from "../../employees.json";
 import Wrapper from "../Wrapper";
 
 class Employee extends React.Component{
 
   state = {
-    employees: employees
+    employees: employees,
+    employeesAsc: []
   };
+
+  sortAscending = () => {
+    this.state.employees.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)); 
+    this.setState({ employees })
+    console.log("sorted");
+  }
 
   render() {
     return (
@@ -20,7 +28,7 @@ class Employee extends React.Component{
           <Button></Button>
         </div>
         <div className="col">
-          <Filter></Filter>
+          <Sort employees={this.state.employees} sortAscending={this.sortAscending}></Sort>
         </div>
         <div className="col">
           <Filter></Filter>
@@ -28,7 +36,7 @@ class Employee extends React.Component{
       </div>
       <div className="row ml-5">
         {this.state.employees.map((employee) => (<EmployeeCard 
-        id={employee.index} 
+        key={employee.index} 
         name={employee.name} 
         email={employee.email}
         image={employee.image} 

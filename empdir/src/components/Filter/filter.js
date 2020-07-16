@@ -5,7 +5,7 @@ function Filter(props) {
   return (
 <form>
   <div className="form-group row">
-    <label for="filter" className="form-label col">Filter/Sort By:</label>
+    <label for="filter" className="form-label col">Filter By:</label>
       <select className="form-control col" id="filter">
         <option>Name</option>
         <option>Office</option>
