@@ -33,7 +33,11 @@ class Employee extends React.Component{
     return comparison;
   }
   
-  employeesAsc = this.state.employees.sort(this.sortAsc);
+  runSortAsc = () => {
+    // this.state.employeesAsc = this.state.employees.sort(this.sortAsc);
+    this.setState({employees: this.state.employees.sort(this.sortAsc)})
+  }
+  
 
   render() {
     return (
@@ -44,7 +48,7 @@ class Employee extends React.Component{
           <Button></Button>
         </div>
         <div className="col">
-          <Sort employees={this.state.employees} sortAscending={this.sortAscending}></Sort>
+          <Sort employees={this.state.employees} runSortAsc={this.runSortAsc}></Sort>
         </div>
         <div className="col">
           <Filter></Filter>
