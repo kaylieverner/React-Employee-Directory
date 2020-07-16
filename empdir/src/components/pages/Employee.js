@@ -13,11 +13,27 @@ class Employee extends React.Component{
     employeesAsc: []
   };
 
-  sortAscending = () => {
-    this.state.employees.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)); 
-    this.setState({ employees })
-    console.log("sorted");
+  // sortAscending = () => {
+  //   this.state.employees.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)); 
+  //   this.setState({ employees })
+  //   console.log("sorted");
+  // }
+
+  sortAsc = (a, b) => {
+    // Use toUpperCase() to ignore character casing
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+  
+    let comparison = 0;
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+    return comparison;
   }
+  
+  employeesAsc = this.state.employees.sort(this.sortAsc);
 
   render() {
     return (
