@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 // import FilterOption from "../FilterOption/filterOption";
 
-function Filter(props) {
+function Dropdown(props) {
 
   
   return (
@@ -26,4 +26,4 @@ function Filter(props) {
   
 }
 
-export default Filter;
+export default Dropdown;

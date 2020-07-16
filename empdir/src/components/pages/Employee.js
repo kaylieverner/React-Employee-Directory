@@ -1,7 +1,7 @@
 import React from "react";
 import EmployeeCard from "../EmployeeCard/EmployeeCard";
 // import Button from "../Button/button";
-import Filter from "../Filter/filter";
+import Dropdown from "../Filter/filter";
 // import FilterOption from "../FilterOption/filterOption";
 import Sort from "../Sort/sort"
 import employees from "../../employees.json";
@@ -57,14 +57,7 @@ class Employee extends React.Component{
           <Sort employees={this.state.employees} runSortAsc={this.runSortAsc}></Sort>
         </div>
         <div className="col">
-          {/* <Filter employees={this.state.employees}> */}
-          {this.state.employees.map(employee => (
-            <Filter
-            key={employee.id}
-            id={employee.id}
-            name={employee.name}></Filter>
-          ))}
-          {/* </Filter> */}
+          <Dropdown></Dropdown>
         </div>
       </div>
       <div className="row ml-5">
