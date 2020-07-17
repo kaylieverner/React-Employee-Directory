@@ -1,7 +1,7 @@
 import React from "react";
 import EmployeeCard from "../EmployeeCard/EmployeeCard";
 // import Button from "../Button/button";
-import Dropdown from "../Filter/filter";
+import Filter from "../Filter/filter";
 // import FilterOption from "../FilterOption/filterOption";
 import Sort from "../Sort/sort"
 import employees from "../../employees.json";
@@ -11,7 +11,9 @@ class Employee extends React.Component{
 
   state = {
     employees,
-    employeesAsc: []
+    employeesAsc: [], 
+    employeeNames: [],
+    filter: []
   };
 
   //Sort Functionality 
@@ -35,15 +37,24 @@ class Employee extends React.Component{
   }
 
   //Filter Functionality 
- 
+  //populates dropdown list
+  getNames = () => {
+    let names = employees.map(employee => employee.name); 
+    this.setState({employeeNames: names});
+    console.log(this.state.employeeNames);
+  }
 
+  filterByName = () => {
+    const filteredEmployee = this.state.employees.filter(employee => employee.name);
+    this.setState({ employees: filteredEmployee});
+  };
+  
   // removeEmployee = id => {
   //   const employees = this.state.employees.filter(employee => employee.id !== id);
   //   this.setState({ employees })
   //   // console.log(this.state.employees.id);
   //   // this.setState({ employees: this.state.employees.filter(employee => employee.id !== id) });
   // };
-  
 
   render() {
     return (
@@ -57,7 +68,10 @@ class Employee extends React.Component{
           <Sort employees={this.state.employees} runSortAsc={this.runSortAsc}></Sort>
         </div>
         <div className="col">
-          <Dropdown></Dropdown>
+          <Filter 
+          getNames={this.getNames} 
+          employeeNames={this.state.employeeNames}
+          filterByName={this.filterByName}></Filter>
         </div>
       </div>
       <div className="row ml-5">
