@@ -54,6 +54,7 @@ class Employee extends React.Component{
     this.setState({filteredArr: filteredEmployee});
   }
 
+  //conditional rendering based on if an option from the filter dropdown was selected 
   renderEmployeeCards = () => {
     if (this.state.filteredArr.length !== 0) {
       return this.state.filteredArr.map(employee => (
@@ -82,49 +83,20 @@ class Employee extends React.Component{
     }
   }
 
-  // renderFilteredEmployee = () => {
-  //   {this.state.filteredArr.map(employee => (
-  //     <EmployeeCard
-  //       key={employee.id} 
-  //       id={employee.id}
-  //       name={employee.name} 
-  //       email={employee.email}
-  //       image={employee.image} 
-  //       role={employee.role} 
-  //       department={employee.department} 
-  //       office={employee.office}></EmployeeCard>
-  //   ))}
-  // };
-
-  // renderAllEmployees = () => {
-  //   {this.state.employees.map(employee => (
-  //     <EmployeeCard 
-  //     // removeEmployee={this.removeEmployee}
-  //     key={employee.id} 
-  //     id={employee.id}
-  //     name={employee.name} 
-  //     email={employee.email}
-  //     image={employee.image} 
-  //     role={employee.role} 
-  //     department={employee.department} 
-  //     office={employee.office}></EmployeeCard>))}
-  // };
-
   render() {
     return (
     <Wrapper>
     <div>
       <div className="row">
-        <div className="col">
+        {/* <div className="col">
           {/* <Button></Button> */}
-        </div>
-        <div className="col">
+        {/* </div> */} 
+        <div className="col-3">
           <Sort employees={this.state.employees} runSortAsc={this.runSortAsc}></Sort>
         </div>
-        <div className="col">
+        <div className="col-5">
           <Filter 
           setSelectedEmployee={this.setSelectedEmployee.bind(this)}
-          ////////
           selectedEmployee={this.state.selectedEmployee}
           getNames={this.getNames} 
           employees={this.state.employees}
@@ -134,23 +106,7 @@ class Employee extends React.Component{
         </div>
       </div>
       <div className="row ml-5">
-        {/* {//if we have a selectedEmployee, search the employees for that one, and render a card for just them.
-
-        //else, render a card for all employees } */}
-
        {this.renderEmployeeCards()}
-
-        {/* {this.state.employees.map(employee => (
-        <EmployeeCard 
-        // removeEmployee={this.removeEmployee}
-        key={employee.id} 
-        id={employee.id}
-        name={employee.name} 
-        email={employee.email}
-        image={employee.image} 
-        role={employee.role} 
-        department={employee.department} 
-        office={employee.office}></EmployeeCard>))} */}
       </div> 
     </div>
     </Wrapper>

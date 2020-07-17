@@ -11,10 +11,10 @@ function NavTabs() {
     <ul className="nav nav-tabs">
       <li className="nav-item">
         <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
-          Employees
+          Employee Directory
         </Link>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <Link
           to="/department"
           className={location.pathname === "/department" ? "nav-link active" : "nav-link"}
@@ -29,7 +29,7 @@ function NavTabs() {
         >
           Offices
         </Link>
-      </li>
+      </li> */}
     </ul>
   );
 }

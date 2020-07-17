@@ -1,110 +1,110 @@
 [
   {
     "id": 1,
-    "name": "SpongeBob",
+    "name": "Michael Scott",
     "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
-    "email": "spongebob@email.com",
-    "role": "Fry Cook",
-    "department": "Kitchen", 
-    "office": "Bikini Bottom"
+    "email": "mscott@dundermifflin.com",
+    "role": "Regional Manager",
+    "department": "Management", 
+    "office": "Scranton"
   },
   {
     "id": 2,
-    "name": "Mr. Krabs",
+    "name": "Dwight Schrute",
     "image": "https://vignette3.wikia.nocookie.net/vsbattles/images/8/80/Mr._Krabs.png/revision/latest?cb=20150919162131",
-    "email": "krabs@email.com",
-    "role": "Manager",
-    "department": "Management", 
-    "office": "Bikini Bottom"
+    "email": "dschrute@dundermifflin.com",
+    "role": "Salesman",
+    "department": "Sales", 
+    "office": "Scranton"
   },
   {
     "id": 3,
-    "name": "Squidward",
+    "name": "Jim Halpert",
     "image": "https://vignette2.wikia.nocookie.net/fictionalcharacters/images/a/ac/Squidward.png/revision/latest?cb=20131121012626",
-    "email": "squidward@email.com",
-    "role": "Cashier",
-    "department": "Kitchen", 
-    "office": "Bikini Bottom"
+    "email": "jhalpert@dundermifflin.com",
+    "role": "Salesman",
+    "department": "Sales", 
+    "office": "Scranton"
   },
   {
     "id": 4,
-    "name": "Dexter",
+    "name": "Pam Beesly",
     "image": "https://s-media-cache-ak0.pinimg.com/originals/fe/32/49/fe32495d45283cd6860ae122f0aeaad9.png",
-    "email": "dexter@email.com",
-    "role": "Scientist",
-    "department": "Sceince", 
-    "office": "Bikini Bottom"
+    "email": "pbeesly@dundermifflin.com",
+    "role": "Office Manager",
+    "department": "Admin", 
+    "office": "Scranton"
   },
   {
     "id": 5,
-    "name": "Courage",
+    "name": "Stanley Hudson",
     "image": "https://vignette4.wikia.nocookie.net/vsbattles/images/3/39/Courage-0.png/revision/latest?cb=20160719055423",
-    "email": "courage@email.com",
-    "role": "Dog",
-    "department": "None", 
-    "office": "None"
+    "email": "shudson@dundermifflin.com",
+    "role": "Salesman",
+    "department": "Sales", 
+    "office": "Scranton"
   },
   {
     "id": 6,
-    "name": "Doug Funnie",
+    "name": "Oscar Martinez",
     "image": "https://vignette1.wikia.nocookie.net/doug/images/3/3b/Doug001.gif/revision/latest?cb=20110807170511",
-    "email": "spongebob@email.com",
-    "role": "Fry Cook",
-    "department": "Kitchen", 
-    "office": "Bikini Bottom"
+    "email": "omartinez@dundermifflin.com",
+    "role": "Accountant",
+    "department": "Finance", 
+    "office": "Scranton"
   },
   {
     "id": 7,
-    "name": "Bugs Bunny",
+    "name": "Toby Flenderson",
     "image": "https://vignette2.wikia.nocookie.net/deathbattlefanon/images/2/2b/Bugs_Bunny.png/revision/latest?cb=20151206010607",
-    "email": "spongebob@email.com",
-    "role": "Fry Cook",
-    "department": "Kitchen", 
-    "office": "Bikini Bottom"
+    "email": "tflenderson@dundermifflin.com",
+    "role": "Human Resources Associate",
+    "department": "Human Resources", 
+    "office": "Scranton"
   },
   {
     "id": 8,
-    "name": "Johnny Bravo",
+    "name": "Darryl Philbin",
     "image": "http://vignette3.wikia.nocookie.net/p__/images/9/9a/Johnny_Bravo.png/revision/latest?cb=20131031233339&path-prefix=protagonist",
-    "email": "spongebob@email.com",
-    "role": "Fry Cook",
-    "department": "Kitchen", 
-    "office": "Bikini Bottom"
+    "email": "dphilbin@dundermifflin.com",
+    "role": "Warehouse Manager",
+    "department": "Warehouse", 
+    "office": "Scranton"
   },
   {
     "id": 9,
-    "name": "Tommy Pickles",
+    "name": "Ryan Howard",
     "image": "https://vignette4.wikia.nocookie.net/uncyclopedia/images/e/e4/Tommy_Pickles.png/revision/latest?cb=20110530102641",
-    "email": "spongebob@email.com",
-    "role": "Fry Cook",
-    "department": "Kitchen", 
-    "office": "Bikini Bottom"
+    "email": "rhoward@dundermifflin.com",
+    "role": "VP of NE Sales",
+    "department": "Management", 
+    "office": "Stamford"
   },
   {
     "id": 10,
-    "name": "Rocko",
+    "name": "Kevin Malone",
     "image": "http://vignette3.wikia.nocookie.net/rockosmodernlife/images/9/9e/Rockos-modern-life-4e582a8f06a41.png/revision/latest?cb=20130522173416",
-    "email": "spongebob@email.com",
-    "role": "Fry Cook",
-    "department": "Kitchen", 
-    "office": "Bikini Bottom"
+    "email": "kmalone@dundermifflin.com",
+    "role": "Accountant",
+    "department": "Finance", 
+    "office": "Scranton"
   },
   {
     "id": 11,
-    "name": "Captain Planet",
+    "name": "Phyllis Vance",
     "image": "http://vignette2.wikia.nocookie.net/dragon-rap-battles/images/b/b6/Captain_Planet.png/revision/latest?cb=20160911200836",
-    "email": "spongebob@email.com",
-    "role": "Fry Cook",
-    "department": "Kitchen", 
-    "office": "Bikini Bottom"
+    "email": "pvance@dundermifflin.com",
+    "role": "Sales Representative",
+    "department": "Sales", 
+    "office": "Scranton"
   },
   {
     "id": 12,
-    "name": "Ickis",
+    "name": "Kelly Kapoor",
     "image": "http://static.tvtropes.org/pmwiki/pub/images/ickis.png",
-    "email": "spongebob@email.com",
-    "role": "Fry Cook",
-    "department": "Kitchen", 
-    "office": "Bikini Bottom"
+    "email": "kkapoor@dundermifflin.com",
+    "role": "Customer Service Representative",
+    "department": "Support", 
+    "office": "Scranton"
   }
 ]
