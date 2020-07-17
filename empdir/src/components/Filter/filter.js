@@ -3,12 +3,14 @@ import "./style.css";
 // import FilterOption from "../FilterOption/filterOption";
 
 function Filter(props) {
+
   return (
 <form>
   <div className="form-group row">
     <label htmlFor="filter" className="form-label col">Filter By:</label>
     <input
-          onChange={props.getNames}
+          value={props.selectedEmployee}
+          onChange={props.handleInputChange}
           name="name"
           list="names"
           type="text"
@@ -22,10 +24,6 @@ function Filter(props) {
             <option value={name} key={name} name={name} onChange={props.filterByName}/>
           ))}
         </datalist>
-
-      {/* <select className="form-control col" id="filter">
-      <option>Name</option>
-      </select> */}
     </div>
 </form>
 

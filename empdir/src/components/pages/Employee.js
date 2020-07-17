@@ -10,10 +10,10 @@ import Wrapper from "../Wrapper";
 class Employee extends React.Component{
 
   state = {
-    employees,
-    employeesAsc: [], 
-    employeeNames: [],
-    filter: []
+    employees: employees,
+    employeesAvailable: employees,
+    selectedEmployee: "", 
+    employeeNames: []
   };
 
   //Sort Functionality 
@@ -44,17 +44,17 @@ class Employee extends React.Component{
     console.log(this.state.employeeNames);
   }
 
-  filterByName = () => {
-    const filteredEmployee = this.state.employees.filter(employee => employee.name);
-    this.setState({ employees: filteredEmployee});
-  };
-  
-  // removeEmployee = id => {
-  //   const employees = this.state.employees.filter(employee => employee.id !== id);
-  //   this.setState({ employees })
-  //   // console.log(this.state.employees.id);
-  //   // this.setState({ employees: this.state.employees.filter(employee => employee.id !== id) });
+  handleInputChange = event => {
+    this.getNames();
+    this.setState({employees: event.target.value});
+    console.log(event.target.value);
+  }
+
+  // filterByName = () => {
+  //   const filteredEmployee = this.state.employees.filter(employee => employee.name == value);
+  //   this.setState({ employees: filteredEmployee});
   // };
+  
 
   render() {
     return (
@@ -70,8 +70,10 @@ class Employee extends React.Component{
         <div className="col">
           <Filter 
           getNames={this.getNames} 
+          employees={this.state.employees}
           employeeNames={this.state.employeeNames}
-          filterByName={this.filterByName}></Filter>
+          filterByName={this.filterByName}
+          handleInputChange={this.handleInputChange}></Filter>
         </div>
       </div>
       <div className="row ml-5">
