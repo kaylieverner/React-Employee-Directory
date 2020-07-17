@@ -12,7 +12,8 @@ class Employee extends React.Component{
   state = {
     employees: employees,
     employeeNames: [], 
-    selectedEmployee: ""
+    selectedEmployee: "", 
+    filteredArr: []
   };
 
   //Sort Functionality 
@@ -46,15 +47,68 @@ class Employee extends React.Component{
     this.getNames();
     this.setState({selectedEmployee: event.target.value});
     console.log(event.target.value);
-    this.filterByName();
-  }
-
-  filterByName = () => {
     const filteredEmployee = this.state.employees.filter(employee => 
-      employee.name === this.state.selectedEmployee
+      employee.name === event.target.value
       );
       console.log(filteredEmployee);
-  };
+    this.setState({filteredArr: filteredEmployee});
+  }
+
+  renderEmployeeCards = () => {
+    if (this.state.filteredArr.length !== 0) {
+      return this.state.filteredArr.map(employee => (
+        <EmployeeCard
+          key={employee.id} 
+          id={employee.id}
+          name={employee.name} 
+          email={employee.email}
+          image={employee.image} 
+          role={employee.role} 
+          department={employee.department} 
+          office={employee.office}></EmployeeCard>
+      ))
+    } else {
+      return this.state.employees.map(employee => (
+        <EmployeeCard 
+        // removeEmployee={this.removeEmployee}
+        key={employee.id} 
+        id={employee.id}
+        name={employee.name} 
+        email={employee.email}
+        image={employee.image} 
+        role={employee.role} 
+        department={employee.department} 
+        office={employee.office}></EmployeeCard>))
+    }
+  }
+
+  // renderFilteredEmployee = () => {
+  //   {this.state.filteredArr.map(employee => (
+  //     <EmployeeCard
+  //       key={employee.id} 
+  //       id={employee.id}
+  //       name={employee.name} 
+  //       email={employee.email}
+  //       image={employee.image} 
+  //       role={employee.role} 
+  //       department={employee.department} 
+  //       office={employee.office}></EmployeeCard>
+  //   ))}
+  // };
+
+  // renderAllEmployees = () => {
+  //   {this.state.employees.map(employee => (
+  //     <EmployeeCard 
+  //     // removeEmployee={this.removeEmployee}
+  //     key={employee.id} 
+  //     id={employee.id}
+  //     name={employee.name} 
+  //     email={employee.email}
+  //     image={employee.image} 
+  //     role={employee.role} 
+  //     department={employee.department} 
+  //     office={employee.office}></EmployeeCard>))}
+  // };
 
   render() {
     return (
@@ -84,7 +138,9 @@ class Employee extends React.Component{
 
         //else, render a card for all employees } */}
 
-        {this.state.employees.map(employee => (
+       {this.renderEmployeeCards()}
+
+        {/* {this.state.employees.map(employee => (
         <EmployeeCard 
         // removeEmployee={this.removeEmployee}
         key={employee.id} 
@@ -94,7 +150,7 @@ class Employee extends React.Component{
         image={employee.image} 
         role={employee.role} 
         department={employee.department} 
-        office={employee.office}></EmployeeCard>))}
+        office={employee.office}></EmployeeCard>))} */}
       </div> 
     </div>
     </Wrapper>
