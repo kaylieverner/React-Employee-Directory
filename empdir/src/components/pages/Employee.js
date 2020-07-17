@@ -11,10 +11,8 @@ class Employee extends React.Component{
 
   state = {
     employees: employees,
-    employeesAvailable: employees,
-    selectedEmployee: "", 
     employeeNames: [], 
-    selectedEmployeeArr: []
+    selectedEmployee: ""
   };
 
   //Sort Functionality 
@@ -44,12 +42,16 @@ class Employee extends React.Component{
     this.setState({employeeNames: names});
   }
 
-  handleInputChange = event => {
-    this.getNames();
-    this.setState({selectedEmployee: event.target.value});
-    let newArr = this.state.employees.filter(employee => employee.name === this.state.selectedEmployee); 
-    console.log(newArr);
+  setSelectedEmployee = (employeeName) => {
+    this.setState({selectedEmployee: employeeName})
   }
+
+  // handleInputChange = event => {
+  //   this.getNames();
+  //   this.setState({selectedEmployee: event.target.value});
+  //   let newArr = this.state.employees.filter(employee => employee.name === this.state.selectedEmployee); 
+  //   console.log(newArr);
+  // }
 
   // filterByName = () => {
   //   const filteredEmployee = this.state.employees.filter(employee => employee.name == value);
@@ -70,14 +72,20 @@ class Employee extends React.Component{
         </div>
         <div className="col">
           <Filter 
+          setSelectedEmployee={this.setSelectedEmployee.bind(this)}
+          ////////
           getNames={this.getNames} 
           employees={this.state.employees}
           employeeNames={this.state.employeeNames}
-          filterByName={this.filterByName}
-          handleInputChange={this.handleInputChange}></Filter>
+          >
+          </Filter>
         </div>
       </div>
       <div className="row ml-5">
+        //if we have a selectedEmployee, search the employees for that one, and render a card for just them.
+
+        //else, render a card for all employees 
+
         {this.state.employees.map(employee => (
         <EmployeeCard 
         // removeEmployee={this.removeEmployee}
