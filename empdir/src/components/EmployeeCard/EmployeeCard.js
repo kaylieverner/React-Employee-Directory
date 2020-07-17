@@ -6,7 +6,7 @@ class EmployeeCard extends React.Component {
   render() {
   return (
 <div className="col">
-<div className="media m-4">
+<div className="media mb-3">
   <img className="m-3 imageDiv" src={this.props.image} alt="profile"/>
   <div className="media-body">
     <h5 className="mt-1">{this.props.name}</h5>
