@@ -1,14 +1,11 @@
 import React from "react";
 import EmployeeCard from "../EmployeeCard/EmployeeCard";
-// import Button from "../Button/button";
 import Filter from "../Filter/filter";
-// import FilterOption from "../FilterOption/filterOption";
 import Sort from "../Sort/sort"
 import employees from "../../employees.json";
 import Wrapper from "../Wrapper";
 
 class Employee extends React.Component{
-
   state = {
     employees: employees,
     employeeNames: [], 
@@ -88,24 +85,20 @@ class Employee extends React.Component{
     <Wrapper>
     <div>
       <div className="row">
-        {/* <div className="col">
-          {/* <Button></Button> */}
-        {/* </div> */} 
-        <div className="col-3">
+        <div className="col-6">
           <Sort employees={this.state.employees} runSortAsc={this.runSortAsc}></Sort>
         </div>
-        <div className="col-5">
+        <div className="col-6">
           <Filter 
           setSelectedEmployee={this.setSelectedEmployee.bind(this)}
           selectedEmployee={this.state.selectedEmployee}
           getNames={this.getNames} 
           employees={this.state.employees}
           employeeNames={this.state.employeeNames}
-          >
-          </Filter>
+          ></Filter>
         </div>
       </div>
-      <div className="row ml-5">
+      <div className="row">
        {this.renderEmployeeCards()}
       </div> 
     </div>

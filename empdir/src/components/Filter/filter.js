@@ -5,17 +5,17 @@ import "./style.css";
 function Filter(props) {
 
   return (
-<form>
+<form className="filterMenu">
   <div className="form-group row">
     <label htmlFor="filter" className="form-label col">Filter By:</label>
-    <input
+    <input className="form-control col"
           value={props.selectedEmployee}
           onChange={props.setSelectedEmployee}
           name="name"
           list="names"
           type="text"
           className="form-control"
-          placeholder="Type in a name to filter"
+          placeholder="Enter a Name"
           id="name"
         />
 
@@ -25,7 +25,7 @@ function Filter(props) {
           ))}
         </datalist>
     </div>
-</form>
+</form>  
 
   );
   
