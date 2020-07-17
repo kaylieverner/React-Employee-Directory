@@ -10,7 +10,7 @@ function Filter(props) {
     <label htmlFor="filter" className="form-label col">Filter By:</label>
     <input
           value={props.selectedEmployee}
-          onChange={props.handleInputChange}
+          onChange={props.setSelectedEmployee}
           name="name"
           list="names"
           type="text"

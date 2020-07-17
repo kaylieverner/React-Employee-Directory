@@ -42,22 +42,19 @@ class Employee extends React.Component{
     this.setState({employeeNames: names});
   }
 
-  setSelectedEmployee = (employeeName) => {
-    this.setState({selectedEmployee: employeeName})
+  setSelectedEmployee = (event) => {
+    this.getNames();
+    this.setState({selectedEmployee: event.target.value});
+    console.log(event.target.value);
+    this.filterByName();
   }
 
-  // handleInputChange = event => {
-  //   this.getNames();
-  //   this.setState({selectedEmployee: event.target.value});
-  //   let newArr = this.state.employees.filter(employee => employee.name === this.state.selectedEmployee); 
-  //   console.log(newArr);
-  // }
-
-  // filterByName = () => {
-  //   const filteredEmployee = this.state.employees.filter(employee => employee.name == value);
-  //   this.setState({ employees: filteredEmployee});
-  // };
-  
+  filterByName = () => {
+    const filteredEmployee = this.state.employees.filter(employee => 
+      employee.name === this.state.selectedEmployee
+      );
+      console.log(filteredEmployee);
+  };
 
   render() {
     return (
@@ -74,6 +71,7 @@ class Employee extends React.Component{
           <Filter 
           setSelectedEmployee={this.setSelectedEmployee.bind(this)}
           ////////
+          selectedEmployee={this.state.selectedEmployee}
           getNames={this.getNames} 
           employees={this.state.employees}
           employeeNames={this.state.employeeNames}
@@ -82,9 +80,9 @@ class Employee extends React.Component{
         </div>
       </div>
       <div className="row ml-5">
-        //if we have a selectedEmployee, search the employees for that one, and render a card for just them.
+        {/* {//if we have a selectedEmployee, search the employees for that one, and render a card for just them.
 
-        //else, render a card for all employees 
+        //else, render a card for all employees } */}
 
         {this.state.employees.map(employee => (
         <EmployeeCard 
