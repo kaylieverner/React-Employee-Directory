@@ -13,7 +13,8 @@ class Employee extends React.Component{
     employees: employees,
     employeesAvailable: employees,
     selectedEmployee: "", 
-    employeeNames: []
+    employeeNames: [], 
+    selectedEmployeeArr: []
   };
 
   //Sort Functionality 
@@ -41,13 +42,13 @@ class Employee extends React.Component{
   getNames = () => {
     let names = employees.map(employee => employee.name); 
     this.setState({employeeNames: names});
-    console.log(this.state.employeeNames);
   }
 
   handleInputChange = event => {
     this.getNames();
-    this.setState({employees: event.target.value});
-    console.log(event.target.value);
+    this.setState({selectedEmployee: event.target.value});
+    let newArr = this.state.employees.filter(employee => employee.name === this.state.selectedEmployee); 
+    console.log(newArr);
   }
 
   // filterByName = () => {
