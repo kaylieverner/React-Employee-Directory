@@ -1,0 +1,10 @@
+.imageDiv{
+  height: 100px;
+  width: auto;
+}
+
+.media{
+  outline: 2px solid rgb(226, 216, 216);
+  background-color: white;
+  font-family: 'Quicksand', sans-serif;
+}
